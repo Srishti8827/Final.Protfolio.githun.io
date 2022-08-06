@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>protfolio website</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- <script src="index.js"></script> -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" media="screen and (max-width:885px)" href="phone.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home1">Home</a></li>
+            <li><a href="#sec">About me</a></li>
+            <li><a href="#skills">skills</a></li>
+            <li><a href="#pro">projects</a></li>
+            <li><a href="#formin">contact</a></li>
+        </ul>
+    </nav>
+    <div class="home" id="home1">
+        <h2>Portfolio website</h2>
+        <p>This is the website for the purpose to make my protfilio.</p>
+        <img src="WhatsApp Image 2022-06-12 at 12.13.02 PM.jpeg" alt="">
+        <div id="box"></div>
+    </div>
+    <section id="sec">
+        <h2>About myself</h2>
+        <p>My name is Srishti Khandelwar<br>Currently pursuing my btech in cse 2nd year.<br>I am from Pipariya Madhya
+            Pradesh.<br>My hobbies include sketching,singing,<br> music,reading books</p>
+    </section>
+    <section class="skill" id="skills">
+        <h2>My skills include</h2>
+        <ol>
+            <li>Team work</li>
+            <li>Management skill</li>
+            <li>Hardworking</li>
+            <li>Communication skill</li>
+        </ol>
+    </section>
+    <div class="project" id="pro">
+        <h2>Projects</h2>
+        <p>I have done projects like i have made website of online food delivery</p>
+        <a href="https://srishti8827.github.io/Online-food-delivery.github.io/" target="_blank">My website</a>
+    </div>
+    <div class="form" id="formin">
+        <form method="post" name="sample">
+            <br>
+            <input type="text" name="name" placeholder="Enter your Name"><br>
+            <input type="phone" name="phone" placeholder="Enter your Phone no">
+            <br>
+             <input type="email" name="email" placeholder="Enter your Email">
+            <br>
+            <input type="text" name="message" placeholder="Enter your Message">
+            <br><br>
+            <input type="button" id="btn" name="add" value="add data" onclick="addStudent();">
+            <table id="tb1" class="table" border="1">
+                <thead>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Message</th>
+                <tbody>
+
+                </tbody>
+                </thead>
+            </table>
+        </form>
+        <script type="text/javascript">
+            function addStudent() {
+                var name = document.sample.name.value;
+                var phone = document.sample.phone.value;
+                var email = document.sample.email.value;
+                var message = document.sample.message.value;
+                var tr = document.createElement('tr');
+                var td1 = tr.appendChild(document.createElement('td'));
+                var td2 = tr.appendChild(document.createElement('td'));
+                var td3 = tr.appendChild(document.createElement('td'));
+                var td4 = tr.appendChild(document.createElement('td'));
+                td1.innerHTML = name;
+                td2.innerHTML = phone;
+                td3.innerHTML = email;
+                td4.innerHTML = message;
+
+                document.getElementById("tb1").appendChild(tr);
+                document.getElementById("tb2").appendChild(tr);
+                document.getElementById("tb3").appendChild(tr);
+                document.getElementById("tb4").appendChild(tr);
+            }
+        </script>
+</body>
+
+</html>
